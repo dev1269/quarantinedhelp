@@ -12,20 +12,27 @@ export enum EUserType {
     HELPER, AFFECTED, AUTHORITIES, THIRD_PARTY
 }
 
-export interface IRegisterForm {
+export interface IUSer {
     firstName: string;
     lastName: string;
     email: string;
-    position: any;
+    password: string;
+}
+
+export interface IPosition {
+    longitude: any;
+    lattitude: any;
+}
+export interface IRegisterForm {
+    user: IUSer;
+    position: IPosition;
     type: EUserType;
-    firstAddress: string;
-    secondAddress?: string;
+    firstLineOfAddress: string;
+    secondLineOfAddress?: string;
     country: string;
-    googlePlaceId?: string;
-    postcode: number;
+    placeId?: string;
+    postCode: number;
     city: string;
     phone: number;
-    is_available: boolean;
-    crisis: string;
-    abilities: any;
+    crisis: any;
 }

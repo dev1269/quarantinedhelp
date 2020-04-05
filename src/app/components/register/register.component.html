@@ -116,7 +116,7 @@
 
                     <div class="actions">
                         <button mat-button matStepperPrevious>{{ 'general.back' | translate }}</button>
-                        <button mat-button matStepperNext>{{ 'general.next' | translate }}</button>
+                        <button mat-button matStepperNext (click)="submit()">{{ 'general.next' | translate }}</button>
                     </div>
                 </form>
             </mat-step>
