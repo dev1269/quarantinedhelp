@@ -77,7 +77,6 @@ export class AutoCompleteComponent implements OnDestroy {
   }
 
   private generateShortAddress(properties: any): string {
-    console.log('PROPS', properties);
 
     let shortAddress = properties.label;
 

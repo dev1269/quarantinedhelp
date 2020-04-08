@@ -21,12 +21,12 @@ export interface IUSer {
 
 export interface IPosition {
     longitude: any;
-    lattitude: any;
+    latitude: any;
 }
 export interface IRegisterForm {
     user: IUSer;
     position: IPosition;
-    type: EUserType;
+    type: string;
     firstLineOfAddress: string;
     secondLineOfAddress?: string;
     country: string;

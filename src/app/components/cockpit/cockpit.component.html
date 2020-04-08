@@ -12,11 +12,11 @@
         {{ 'auth.new-user-message' | translate }}
     </div>
     <div class="register-main">
-        <div class="register-main_left" [routerLink]="'/register'">
+        <div class="register-main_left" [routerLink]="'/register'" [queryParams]="{ userType: 'AF' }">
             <mat-icon>hotel</mat-icon>
             <span class="register-main_left__title">{{ 'auth.quarantined-user' | translate }}</span>
         </div>
-        <div class="register-main_right" [routerLink]="'/register'">
+        <div class="register-main_right" [routerLink]="'/register'" [queryParams]="{ userType: 'HL' }">
             <mat-icon>emoji_people</mat-icon>
             <span class="register-main_right__title">{{ 'auth.volunteer' | translate }}</span>
         </div>

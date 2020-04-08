@@ -45,6 +45,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HeaderComponent } from './components/header/header.component';
 import { LOCATION_INITIALIZED, CommonModule } from '@angular/common';
 import { AutoCompleteComponent } from './components/auto-complete/auto-complete.component';
+import { AuthService } from './services/auth.service';
 
 export function appInitializerFactory(translate: TranslateService, injector: Injector) {
   return () => new Promise<any>((resolve: any) => {
@@ -129,7 +130,8 @@ export function createTranslateLoader(http: HttpClient) {
       useFactory: appInitializerFactory,
       deps: [TranslateService, Injector],
       multi: true
-    }
+    },
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

@@ -14,7 +14,7 @@ export class CockpitComponent implements OnInit {
   ngOnInit() {
   }
 
-  navigateTo(route: string): void {
+  navigateTo(route: string, type?: string): void {
     this._router.navigate([route]);
   }
 
